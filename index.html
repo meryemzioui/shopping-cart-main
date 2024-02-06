@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- box icon link -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- swiper link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- swiper css -->
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
+  </head>
+
+  <body>
+    <!-- nav bar -->
+    <header>
+      <a href=""><img class="logo" src="img/logo.webp" alt="" /></a>
+      <ul class="navbar">
+        <li><a href="#home">home</a></li>
+        <li><a href="#about">about us</a></li>
+        <li><a href="#menu">menu</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+      <div class="header-icon">
+        <i id="cart-icon" class="bx bxs-cart-alt"></i>
+      </div>
+    </header>
+    <!-- swiper js -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/falafels.webp" alt="" /></div>
+        <div class="swiper-slide"><img src="img/kefta.webp" alt="" /></div>
+        <div class="swiper-slide">
+          <img src="img/merlan-frit-a-la-chermoula.webp" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/pastilla-aux-poissons.webp" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/pates-a-la-carbonara.webp" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/poisson-a-la-sauce-tomate-epicee.webp" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/recette-gratin-chou-fleur.webp" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/soupe-marocaine-harira.webp" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/tbikha-aubergine.webp" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/trida-constantinoise.webp" alt="" />
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- menu -->
+    <div class="body">
+      <div class="container">
+        <h3 class="heading">Plats</h3>
+        <div class="result"></div>
+      </div>
+      <!-- add to cart -->
+      <div class="cart">
+        <div class="cart-header">
+          <h3>CART</h3>
+          <p class="noOfItems">0 items</p>
+        </div>
+        <hr noshade="true" size="1px" />
+        <div class="cart-items"></div>
+        <hr noshade="true" size="1px" />
+        <div class="cart-footer cart-header">
+          <h4>Total</h4>
+          <p class="total">$0</p>
+        </div>
+        <button class="buy-btn">PROCEED TO BUY</button>
+      </div>
+    </div>
+    <p class="footer">
+      Made with ❤️ by <a href="" target="_blank">meryem zioui</a>
+    </p>
+    <script src="app.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <!-- dark mode -->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+      function addDarkmodeWidget() {
+        new Darkmode().showWidget();
+      }
+      window.addEventListener("load", addDarkmodeWidget);
+    </script>
+  </body>
+</html>
